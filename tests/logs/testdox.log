@@ -1,0 +1,8 @@
+Auth (Tests\Unit\Auth)
+ [x] Login true
+
+Auth (Tests\Feature\Auth)
+ [x] Login true
+ [x] Login false
+ [x] Login sem dados
+

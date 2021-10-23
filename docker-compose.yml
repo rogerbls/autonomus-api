@@ -14,7 +14,7 @@ services:
     volumes:
       - ./:/var/www
     networks:
-      - network
+      - autonomus
 
   db:
     image: mysql:8.0
@@ -32,7 +32,7 @@ services:
     volumes:
       - ./docker-compose/mysql:/docker-entrypoint-initdb.d
     networks:
-      - network
+      - autonomus
 
   nginx:
     image: nginx:alpine
@@ -44,8 +44,8 @@ services:
       - ./:/var/www
       - ./docker-compose/nginx:/etc/nginx/conf.d/
     networks:
-      - network
+      - autonomus
 
 networks:
-  network:
+  autonomus:
     driver: bridge
